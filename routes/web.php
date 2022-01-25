@@ -18,11 +18,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('Home');
+    return view('home',["title" => "Home"
+    ]);
 });
 
 Route::get('/about', function () {
-    return view('About',[
+    return view('about',[
+        "title" => "About",
         "nama" => "Dhemaz Valent Febranka",
         "email" => "dhemazvalent@gmail.com",
         "gambar" => "fotoaing.jpeg"
@@ -30,6 +32,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/gallery', function () {
-    return view('Gallery');
+    return view('gallery',["title" => "Gallery"
+    ]);
 });
 
